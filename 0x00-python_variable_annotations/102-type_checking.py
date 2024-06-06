@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
+"""type checking"""
 from typing import List, Tuple
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
-     """checking Exercise"""
+    """checking Exercise"""
     zoomed_in: List = [
         item for item in lst
         for i in range(int(factor))
