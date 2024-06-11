@@ -1,20 +1,13 @@
 #!/usr/bin/env python3
-""" mesures the time """
+""" Mesures the time """
 import asyncio
 import time
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime() -> float:
-    """ 
-     Generate numbers with async understanding
-
-        Args:
-            void
-
-        Return:
-            float random numbers
-    """
+    """ Executes async_comprehension four times in parallel
+        and measure_runtime should measure total runtime then return it """
     start_time = time.perf_counter()
     await asyncio.gather(async_comprehension(), async_comprehension(),
                          async_comprehension(), async_comprehension())
